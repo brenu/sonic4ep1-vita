@@ -33,11 +33,11 @@ The VPK is generated at `work/build/sonic4ep1_wip.vpk`. `VITASDK` defaults to `/
 
 ### Should I enable `SONIC_PERFORMANCE_PROFILE`?
 
-This is a **build-time** setting, not something to enable on the Vita. If you install a prebuilt VPK, you do not need to set it. When building from source, `build.sh` enables it by default, along with host optimization level 3 and the tested WVP-on-GPU option. This is recommended for playing: an unoptimized debug build measured 16.2 FPS, while the optimized stable build measured 20.8 FPS over a full level. The profile quiets repeated diagnostics but does not disable VitaGL validation. Leave `SONIC_VITAGL_SKIP_ERROR_HANDLING=OFF`; disabling error handling caused GPU-driver crashes in testing. For manual CMake builds, set `SONIC_PERFORMANCE_PROFILE=ON`, `SONIC_HOST_OPT_LEVEL=3`, and `SONIC_VITAGL_WVP_ON_GPU=ON` to get the same player profile.
+This is a **build-time** setting, not something to enable on the Vita. If you install a prebuilt VPK, you do not need to set it. When building from source, `build.sh` enables it by default, along with host optimization level 3 and the tested WVP-on-GPU option. This is recommended for playing: an unoptimized debug build measured 16.2 FPS, while the optimized stable build measured 20.8 FPS over a full level. The profile quiets repeated diagnostics but does not disable VitaGL validation. For manual CMake builds, set `SONIC_PERFORMANCE_PROFILE=ON`, `SONIC_HOST_OPT_LEVEL=3`, and `SONIC_VITAGL_WVP_ON_GPU=ON` to get the same player profile.
 
 ## Game data setup
 
-The port expects the Android release **1.5.0 / build 6200011**. It does not read an arbitrary APK/OBB layout. Use your own copy of that game's APK and expansion OBB; this repository does not provide them.
+The port expects the Android release **1.5.0**. It does not read an arbitrary APK/OBB layout. Use your own copy of that game's APK and expansion OBB; this repository does not provide them.
 
 Put those two files in this exact layout on the PC, relative to the repository root:
 
@@ -48,7 +48,7 @@ sonic4ep1-vita/
     └── main.6200011.com.sega.sonic4epi.obb
 ```
 
-Keep the APK filename, OBB filename, and subfolder exactly as shown. The staging script checks their SHA-256 hashes against the analyzed game revision and stops if they differ. The APK should be 38,851,237 bytes; the OBB should be 86,710,212 bytes.
+Keep the structure exactly as shown.
 
 Run:
 
@@ -56,7 +56,7 @@ Run:
 python3 tools/stage_data.py
 ```
 
-This creates `staging/ux0/data/sonic4ep1/` on the PC. It places the original APK there as `game.apk`, copies the OBB unchanged as `main.6200011.com.sega.sonic4epi.obb`, and extracts **all** `.so` files from the APK's `lib/armeabi/` directory into the same folder. The core library is named `libs3e_android.so`; S3E extension libraries are stored beside it.
+This creates `staging/ux0/data/sonic4ep1/` on the PC. It places the original APK there as `game.apk`, copies the OBB unchanged, and extracts **all** `.so` files from the APK's `lib/armeabi/` directory into the same folder. The core library is named `libs3e_android.so`; S3E extension libraries are stored beside it.
 
 Copy the **contents** of `staging/ux0/data/sonic4ep1/` to the Vita folder `ux0:data/sonic4ep1/` using VitaShell USB/FTP or another file-transfer method. Do not copy the outer `staging` directory, rename or unzip the OBB, or put the APK inside another subfolder. On the Vita, the resulting layout should look like:
 
