@@ -36,5 +36,6 @@ with zipfile.ZipFile(apk) as z:
         if name.startswith('lib/armeabi/') and name.endswith('.so'):
             # Only a basename from the explicitly selected native-library directory.
             (target / Path(name).name).write_bytes(z.read(name))
-print(f'Private data staged: {target}')
-print('Layout is provisional until Marmalade APK/OBB path callbacks are implemented.')
+print(f'Private game data staged at: {target}')
+print('Copy the contents of this directory to ux0:data/sonic4ep1/ on the Vita.')
+print('The APK is renamed to game.apk, the OBB is copied unchanged, and lib/armeabi/*.so files are extracted beside them.')
