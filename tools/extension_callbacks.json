@@ -1,0 +1,140 @@
+[
+  {
+    "class_name": "s3eFlurry",
+    "name": "<init>",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryCountPageView",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryEndSession",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryEndTimedEvent",
+    "signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryLogError",
+    "signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryLogEvent",
+    "signature": "(Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryLogEventParams",
+    "signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryLogEventParamsTimed",
+    "signature": "(Ljava/lang/String;Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryLogEventTimed",
+    "signature": "(Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurrySetAge",
+    "signature": "(I)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurrySetSessionReportsOnCloseEnabled",
+    "signature": "(Z)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurrySetSessionReportsOnPauseEnabled",
+    "signature": "(Z)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurrySetUserID",
+    "signature": "(Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eFlurry",
+    "name": "s3eFlurryStartSession",
+    "signature": "(Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "<init>",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "s3eAPKExpansionGetAbsolutePath",
+    "signature": "()Ljava/lang/String;",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "s3eAPKExpansionGetDownloadState",
+    "signature": "()I",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "s3eAPKExpansionGetMainExpansionFilename",
+    "signature": "()Ljava/lang/String;",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "s3eAPKExpansionInitialize",
+    "signature": "(Ljava/lang/String;)V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "s3eAPKExpansionStart",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eAPKExpansion",
+    "name": "s3eAPKExpansionStop",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eDialog",
+    "name": "<init>",
+    "signature": "()V",
+    "kind": "method"
+  },
+  {
+    "class_name": "s3eDialog",
+    "name": "s3eDialogAlertBox",
+    "signature": "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z",
+    "kind": "method"
+  }
+]
